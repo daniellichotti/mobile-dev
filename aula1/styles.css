@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container0 {
+  background-color: #2f0147;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.container1 {
+  background-color: #9c528b;
+  height: 100px;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: smaller;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #e2c2c6;
+  letter-spacing: 3px;
+}
+
+.container2 {
+  background-color: #9c528b;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container2 {
+  background-color: #9c528b;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container3 {
+  background-color: #9c528b;
+  height: 100px;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  gap: 1px;
+}
+
+.container4 {
+  background-color: red;
+  height: 100%;
+  width: 100px;
+}
+.container5 {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+}
