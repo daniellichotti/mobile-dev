@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: #052e16;
+    color: #86efac;
+    font-family: 'Courier New', Courier, monospace;
+
+    height: 100vh;
+  }
+  .classflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+  h1 {
+    color: #f0fdf4;
+  }
+  #botaoAdvinhar {
+    background-color: #16a34a;
+  }
+  .botaoReiniciar {
+    border: 0;
+    padding: 8px;
+    border-radius: 10px;
+    transition: .2s;
+  }
+  .botaoReiniciar:hover {
+    background-color: red;
+    cursor: pointer;
+  }
+  input {
+    width: 200px;
+    border-radius: 8px;
+    border: none;
+  }
+  input:focus {
+      outline: none;
+  }
