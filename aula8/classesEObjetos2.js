@@ -7,6 +7,8 @@ class User {
 
   sendEmail() {
     console.log('email enviado de', this.name, 'com a data de nascimento', this.birthDate, 'do endereço', this.email)
+    console.log('email enviado de ' + this.name + ' com a data de nascimento ' + this.birthDate + ' do endereço ' + this.email)
+    console.log(`email enviado de ${this.name} com a data de nascimento ${this.birthDate} do endereço ${this.email}`)
   }
 }
 
