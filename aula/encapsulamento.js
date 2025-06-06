@@ -55,3 +55,5 @@ export class Usuario {
   // Não há getter para a senha — protegida (encapsulamento real)
 }
 
+const usuario = new Usuario("Ana", "ana@email.com", "1234");
+console.log(usuario.nome)
