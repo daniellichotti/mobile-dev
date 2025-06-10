@@ -44,7 +44,6 @@ class Animal {
 const newAnimal = new Animal('Dog')
 console.log(newAnimal.name)
 newAnimal.makeNoise()
-console.clear()
 
 class Dog extends Animal {
   constructor(dogName, race, color) {
@@ -78,3 +77,58 @@ const newCat = new Cat('Siamês', 'Amarelo')
 console.log('O animal é um', newCat.name, 'da raça', newCat.race, 'da cor', newCat.color)
 newCat.makeNoise()
 
+
+class Car {
+  constructor(marca, modelo, ano, cor) {
+    this.marca = marca
+    this.modelo = modelo
+    this.ano = ano
+    this.cor = cor
+  }
+
+  turnOn() {
+    console.log('O carro esta ligando...')
+  }
+
+  turnOff() {
+    console.log('O carro esta desligando...')
+  }
+}
+
+const bmwCar = new Car('BMW', 'X5', '2025', 'Prata')
+console.log(bmwCar)
+console.log(bmwCar.ano, bmwCar.cor, bmwCar.marca, bmwCar.modelo)
+bmwCar.turnOn()
+bmwCar.turnOff()
+
+console.clear()
+
+class Person {
+  constructor(name, birthDate) {
+    this.name = name
+    this.birthDate = birthDate
+  }
+
+  falar() {
+    console.log('hi')
+  }
+}
+
+class Employee extends Person {
+  constructor(name, birthDate, numFunc) {
+    super(name, birthDate)
+    this.numFunc = numFunc
+  }
+
+  falar() {
+    console.log('estou trabalhando')
+  }
+}
+
+const employee = new Employee('jose', '10/05/1998', '1231')
+console.log(employee.name, employee.birthDate, employee.numFunc)
+employee.falar()
+
+const usuarios = { nome: 'zé', idade: '20' }
+usuarios.nome
+usuarios.idade
