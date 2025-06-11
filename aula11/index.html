@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuários</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Cadastro de Usuários</h1>
+
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Nome" />
+      <input type="email" id="email" placeholder="Email" />
+      <button type="submit">Cadastrar</button>
+      <p class="error" id="errorMsg"></p>
+    </form>
+
+    <h2>Lista de Usuários</h2>
+    <ul id="userList"></ul>
+
+    <script>
+      // Criar um Array vazio de objetos (usuários)
+      const users = [];
+
+      //Função que irá atualizar a lista na tela
+      function updateUserList() {
+        const list = document.getElementById("userList");
+        list.innerHTML = "";
+
+        //Loop para gerar cada usuario
+        for (let i = 0; i < users.length; i++) {
+          const user = users[i];
+          const li = document.createElement("li");
+          li.textContent = `${user.name} - ${user.email}`;
+          list.appendChild(li);
+        }
+      }
+
+      //evento de envio de formulários
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); //evita que a pagina seja recarregada
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const errorMsg = document.getElementById("errorMsg");
+
+          //Condicional para validar os campos
+          if (name === "" || email === "") {
+            errorMsg.textContent = "Por favor, preencha todos os campos.";
+            return;
+          }
+
+          //criando o objeto usuário
+          const user = {
+            name: name,
+            email: email,
+          };
+
+          //adicionar o obj ao array
+          users.push(user);
+
+          //limpar o formulário e a mensagem de erro se houver
+          document.getElementById("userForm").reset();
+          errorMsg.textContent = "";
+
+          //atualizar a list
+          updateUserList();
+        });
+    </script>
+  </body>
+</html>
