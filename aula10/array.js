@@ -122,8 +122,25 @@ console.log(fruits.includes('apple'))
 //indexof
 console.log(fruits)
 console.log(fruits.indexOf('banana'))
-console.clear()
 
 //find
 const result = fruits.find((fruit) => fruit === 'banana')
 console.log(result)
+
+//slice array.slice(inicio, final)
+console.log(fruits)
+let newFruits = fruits.slice(0, 2)
+let newFruits2 = fruits.slice(3, 5)
+
+console.log(newFruits.concat(newFruits2))
+console.clear()
+
+let numbers = [1, 3, 4, 5, 10]
+//let numbersList1 = numbers.slice(0, 2)
+//let numbersList2 = numbers.slice(3, 5)
+//numbers = numbersList1.concat(numbersList2)
+
+//console.log(numbers.slice(0, 2).concat(numbers.slice(3, 5)))
+
+console.log(numbers.slice(-3))
+
