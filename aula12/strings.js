@@ -83,11 +83,30 @@ Saída esperada: "Olá Mundo, Estou Aprendendo Javascript"
 function capitalizarFrase(frase) {
   let phraseList = frase.split(' ')
 
-  let phraseCap = phraseList.map(word => {
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-  })
+  //let phraseCap = phraseList.map(word => {
+  //return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  //})
+  for (let i = 0; i < phraseList.length; i++) {
+    phraseList[i] = phraseList[i].charAt(0).toUpperCase() + phraseList[i].slice(1).toLowerCase()
+  }
 
-  return phraseCap.join(' ')
+  //return phraseCap.join(' ')
+  return phraseList.join(' ')
 }
 
 console.log(capitalizarFrase("olá mundo, estou aprendendo JAVASCRIPT"));
+
+
+//outro exemplo
+let comida = ['arroz', 'feijao', 'carne']
+let carros = ['bmw', 'gol', 'jipe']
+let alunos = ['caio', 'moises', 'guilherme']
+
+function transformaMaiuscula(lista) {
+  for (let i = 0; i < lista.length; i++) {
+    lista[i] = lista[i].slice(0, 1).toUpperCase() + lista[i].slice(1).toLowerCase()
+  }
+
+  return lista.join(', ')
+}
+console.log(transformaMaiuscula(comida))
