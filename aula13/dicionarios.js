@@ -90,7 +90,6 @@ Detectar Elementos Duplicados em um Array
 Crie uma função chamada temDuplicados que recebe um array de números e retorna true se houver algum número repetido.
 Saída esperada: true
 */
-console.clear()
 
 function temDuplicados(array) {
   const vistos = {}
@@ -109,3 +108,36 @@ function temDuplicados(array) {
 
 console.log(temDuplicados([1, 2, 3, 2, 5])) //True
 console.log(temDuplicados([1, 2, 3, 7, 5])) //False
+
+/*
+Verificar Palavras Proibidas
+Você tem um objeto chamado palavrasProibidas com algumas palavras consideradas inapropriadas.
+Crie uma função verificarMensagem que recebe uma frase (string) e retorna true se alguma palavra proibida estiver presente.
+Saída esperada: true
+*/
+console.clear()
+
+const palavrasProibidas = {
+  ruim: true,
+  proibido: true,
+  ofensivo: true
+};
+
+function verificarMensagem(texto) {
+
+  if (texto.slice(-1) === '.' || texto.slice(-1) === '!' || texto.slice(-1) === '?') {
+    texto = texto.slice(0, texto.length - 1)
+  }
+  const wordList = texto.toLowerCase().split(' ')
+
+  for (const word of wordList) {
+    if (palavrasProibidas[word]) {
+      return true
+    }
+  }
+
+  return false
+}
+
+console.log(verificarMensagem('Esse conteúdo é RuIm e Ofensivo.')) //retorna verdadeiro
+console.log(verificarMensagem('Esse conteúdo é ótimo.')) //retorna false
