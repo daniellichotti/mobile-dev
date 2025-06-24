@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Lucas",
+      "birthday": "09/09/2009"
+    },
+    {
+      "id": "2",
+      "name": "Caio",
+      "birthday": "15/12/2012"
+    },
+    {
+      "id": "3",
+      "name": "Souza",
+      "birthday": "02/03/2004"
+    },
+    {
+      "id": "494a",
+      "name": "Leo",
+      "birthday": "22/12/1990"
+    }
+  ]
+}
