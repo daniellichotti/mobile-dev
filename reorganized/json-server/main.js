@@ -18,8 +18,8 @@ function getUsers() {
     })
 }
 
-async function createUser(name, birthday) {
-  await fetch(apiUrl, {
+function createUser(name, birthday) {
+  fetch(apiUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
