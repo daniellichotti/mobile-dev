@@ -1,5 +1,5 @@
-import { ScrollView } from 'react-native';
-import { Cartao } from './components/Cartao';
+import { SafeAreaView, ScrollView } from 'react-native';
+import { Avatar } from './components/Avatar';
 
 export default function App() {
   /*
@@ -11,11 +11,21 @@ export default function App() {
 
 
   return (
-    <ScrollView style={{ marginTop: 50 }}>
-      <Cartao title="Primeiro" description="Esse é meu primeiro card" />
-      <Cartao title="Segundo" description="Esse é meu segundo card" />
-      <Cartao title="Terceiro" description="Esse é meu terceiro card" />
-    </ScrollView>
+    <SafeAreaView style={{ flex: 1, paddingTop: 40, paddingHorizontal: 10 }}>
+      <ScrollView>
+        <Avatar name='Bandolero' urlImg='https://randomuser.me/api/portraits/lego/6.jpg' />
+        <Avatar name='Jack Chan' urlImg='https://randomuser.me/api/portraits/lego/8.jpg' />
+        <Avatar name='Lucas' urlImg='https://randomuser.me/api/portraits/lego/8.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+        <Avatar name='Moisés' urlImg='https://randomuser.me/api/portraits/lego/3.jpg' />
+      </ScrollView>
+    </SafeAreaView>
 
   );
 }
