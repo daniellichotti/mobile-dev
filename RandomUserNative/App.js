@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Button, SafeAreaView, StyleSheet } from 'react-native';
+import { ActivityIndicator, Button, Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { Header } from './src/components/Header';
+import { UserList } from './src/components/UserList';
 
 export default function App() {
   const [users, setUsers] = useState([])
@@ -12,7 +13,6 @@ export default function App() {
     try {
       const response = await axios.get('https://randomuser.me/api/?results=10')
       setUsers(response.data.results)
-      console.log(users)
     } catch (error) {
       console.error('Erro ao buscar usuários:', error)
     } finally {
@@ -27,13 +27,9 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Header title="Random Users" />
-      <Button color='#2196F3' disabled={loading === true ? true : false} title='Buscar Novos Usuários' onPress={fetchUsers} />
-      <ActivityIndicator color='#2196F3' size='large' />
+      <Button color='#2196F3' disabled={loading} title='Buscar Novos Usuários' onPress={fetchUsers} />
 
-      {
-
-        //<UserList />
-      }
+      {loading ? <ActivityIndicator color='#2196F3' size='large' /> : <UserList users={users} />}
     </SafeAreaView>
   );
 }
@@ -41,7 +37,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 40,
+    marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     paddingHorizontal: 10
   },
 });
