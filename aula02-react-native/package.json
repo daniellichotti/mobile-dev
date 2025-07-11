@@ -11,8 +11,10 @@
   "dependencies": {
     "expo": "~53.0.17",
     "expo-status-bar": "~2.2.3",
+    "phosphor-react-native": "^3.0.0",
     "react": "19.0.0",
-    "react-native": "0.79.5"
+    "react-native": "0.79.5",
+    "react-native-svg": "^15.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

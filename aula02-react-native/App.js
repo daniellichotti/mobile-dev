@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Card } from "./src/components/Card";
+import { StyleSheet, View } from "react-native";
+import { ToDo } from "./src/components/ToDo";
+
 
 
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-      <Card title='Fazer compras' description='Comprar carnes' backgroundColor='red'>
-        <Text>Sou um children do card</Text>
-      </Card>
+      <ToDo />
     </View>
   )
 };
@@ -17,6 +17,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   }
 })
